@@ -9,20 +9,23 @@ custom_labels = [
     "Distribution of Sales",
     "Distribution of Quantity Ordered",
     "Distribution of Price Each",
+    "Relationship between Sales and Quantity Ordered",
+    "Relationship between Price Each and Sales",
+    "Correlation Matrix",
+    "Total sales",
+    "Sale histogram",
     "Sales by Product Line",
     "Order Status Distribution",
-    "Sales vs Quantity Ordered",
-    "Sales vs Price Each",
     "Total Sales by Month",
-    "Correlation Matrix",
-    "Total Sales by Month",
-    "Total Sales with Moving Average",
-    "Sales with Outliers",
-    "Sales with Outliers Replaced"
+    "30-Day Moving Average for Sales",    
+    "Outliers in Sales", 
+    "Monthly Sales Trend",
+    "Clusters of Sales Data",
+    "Monthly Sales Trends by Year"
 ]
 
 # Load notebook
-notebook_path = "notebook2a262f01cb.ipynb"
+notebook_path = "PROJECT_BIGDATA.ipynb"
 with open(notebook_path, "r", encoding="utf-8") as f:
     nb = nbformat.read(f, as_version=4)
 
@@ -61,7 +64,7 @@ if 'selected_index' not in st.session_state:
     st.session_state.selected_index = 0
 
 # === SIDEBAR (KHÔNG highlight) ===
-st.sidebar.title("📁 Danh sách hình ảnh")
+st.sidebar.title("📁 Result from Sale data sample")
 for img in images:
     cols = st.sidebar.columns([1, 4])
     with cols[0]:
